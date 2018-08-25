@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
@@ -115,7 +120,6 @@ func TestPathSetValue(t *testing.T) {
 	newVal, err = PathGetValue(mapVal, path)
 	assert.Nil(t, err)
 	assert.Equal(t, 7, newVal)
-
 
 	arrVal, _ = CoerceToArray("[{\"nestedMap1\":1},{\"nestedMap2\":2}]")
 	path = "[1].nestedMap2"

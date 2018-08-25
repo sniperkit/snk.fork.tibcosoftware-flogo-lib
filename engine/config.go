@@ -1,10 +1,15 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package engine
 
 import (
 	"os"
 	"strconv"
 
-	"github.com/TIBCOSoftware/flogo-lib/engine/runner"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/engine/runner"
 )
 
 const (

@@ -1,4 +1,9 @@
 /*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
+/*
 Copyright (c) 2014 Ashley Jeffs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,10 +31,11 @@ package json
 import (
 	"encoding/json"
 	"errors"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
 	"io"
 	"io/ioutil"
 	"strings"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 //--------------------------------------------------------------------------------------------------

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
@@ -10,7 +15,7 @@ import (
 type Type int
 
 const (
-	TypeAny           Type = iota
+	TypeAny Type = iota
 	TypeString
 	TypeInteger
 	TypeLong
@@ -20,7 +25,6 @@ const (
 	TypeComplexObject
 	TypeArray
 	TypeParams
-
 )
 
 var types = [...]string{

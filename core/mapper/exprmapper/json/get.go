@@ -1,17 +1,20 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package json
 
 import (
+	"encoding/json"
 	"fmt"
 	"reflect"
 	"strconv"
 	"strings"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json/field"
-
 	"sync"
 
-	"encoding/json"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json/field"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 var log = logger.GetLogger("json")

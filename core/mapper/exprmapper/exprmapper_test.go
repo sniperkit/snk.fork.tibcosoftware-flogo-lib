@@ -1,14 +1,19 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package exprmapper
 
 import (
-	"testing"
-
 	"fmt"
 	"strings"
+	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 func TestGetMapValueFunction(t *testing.T) {

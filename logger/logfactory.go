@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package logger
 
 import (
 	"fmt"
 	"sync"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/TIBCOSoftware/flogo-lib/config"
+	"github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
 )
 
 var loggerMap = make(map[string]Logger)

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package activity
 
 // AsyncActivity is an interface for defining a custom Task that supports asynchronous callback

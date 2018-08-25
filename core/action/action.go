@@ -1,10 +1,15 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package action
 
 import (
 	"context"
 	"fmt"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 // Action is an action to perform as a result of a trigger

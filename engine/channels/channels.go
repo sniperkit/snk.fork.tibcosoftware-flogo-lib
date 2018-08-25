@@ -1,12 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package channels
 
 import (
 	"errors"
 	"fmt"
-
-	"github.com/TIBCOSoftware/flogo-lib/logger"
-	"strings"
 	"strconv"
+	"strings"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 var channels = make(map[string]*channelImpl)
@@ -147,13 +152,13 @@ func (c *channelImpl) processEvents() {
 }
 
 // Decode decodes the channel descriptor
-func Decode(channelDescriptor string) (string, int){
-	idx := strings.Index(channelDescriptor,":")
+func Decode(channelDescriptor string) (string, int) {
+	idx := strings.Index(channelDescriptor, ":")
 	buffSize := 0
 	chanName := channelDescriptor
 
 	if idx > 0 {
-		bSize, err:= strconv.Atoi(channelDescriptor[idx+1:])
+		bSize, err := strconv.Atoi(channelDescriptor[idx+1:])
 		if err != nil {
 			logger.Warnf("invalid channel buffer size '%s', defaulting to buffer size of %d", channelDescriptor[idx+1:], buffSize)
 		} else {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
@@ -10,7 +15,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/TIBCOSoftware/flogo-lib/config"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
 )
 
 var secretValueHandler SecretValueHandler
@@ -28,7 +33,7 @@ func SetSecretValueHandler(pwdResolver SecretValueHandler) {
 
 // Get secret value handler. If not already set by SetSecretValueHandler(), will return default KeyBasedSecretValueDecoder
 // where decoding key value is expected to be set through FLOGO_DATA_SECRET_KEY environment variable.
-// If key is not set, a default key value(github.com/TIBCOSoftware/flogo-lib/config.DATA_SECRET_KEY_DEFAULT) will be used.
+// If key is not set, a default key value(github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config.DATA_SECRET_KEY_DEFAULT) will be used.
 func GetSecretValueHandler() SecretValueHandler {
 	if secretValueHandler == nil {
 		secretValueHandler = &KeyBasedSecretValueHandler{Key: config.GetDataSecretKey()}

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package engine
 
 import (
@@ -6,19 +11,19 @@ import (
 	"os"
 	"os/signal"
 	"runtime/debug"
+	"sync"
 	"syscall"
 
-	"github.com/TIBCOSoftware/flogo-lib/app"
-	"github.com/TIBCOSoftware/flogo-lib/config"
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/trigger"
-	"github.com/TIBCOSoftware/flogo-lib/engine/runner"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
-	"github.com/TIBCOSoftware/flogo-lib/util"
-	"github.com/TIBCOSoftware/flogo-lib/util/managed"
-	"sync"
-	"github.com/TIBCOSoftware/flogo-lib/engine/channels"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/app"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/trigger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/engine/channels"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/engine/runner"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/util"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/util/managed"
 )
 
 var managedServices []managed.Managed
@@ -39,12 +44,11 @@ type Engine interface {
 	TriggerInfos() []*managed.Info
 }
 
-func LifeCycle(managedEntity managed.Managed)  {
+func LifeCycle(managedEntity managed.Managed) {
 	defer lock.Unlock()
 	lock.Lock()
 	managedServices = append(managedServices, managedEntity)
 }
-
 
 // engineImpl is the type for the Default Engine Implementation
 type engineImpl struct {

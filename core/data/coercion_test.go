@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"os"
-	"github.com/TIBCOSoftware/flogo-lib/config"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
 )
 
 func TestCoerceToString(t *testing.T) {

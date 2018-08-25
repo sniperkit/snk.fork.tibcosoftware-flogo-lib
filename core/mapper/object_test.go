@@ -1,8 +1,14 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package mapper
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
 	"testing"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 func Test_evalExpr(t *testing.T) {

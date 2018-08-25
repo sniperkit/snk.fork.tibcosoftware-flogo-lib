@@ -1,25 +1,29 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package ref
 
 import (
 	"fmt"
 	"strings"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json"
 )
 
 type ArrayRef struct {
 	ref string
 }
 
-func (m *ArrayRef) GetRef() string{
+func (m *ArrayRef) GetRef() string {
 	return m.ref
 }
 
 func NewArrayRef(ref string) *ArrayRef {
-	return &ArrayRef{ref:ref}
+	return &ArrayRef{ref: ref}
 }
-
 
 func (m *ArrayRef) EvalFromData(data interface{}) (interface{}, error) {
 	log.Debugf("Eval mapping field and ref: %s", m.ref)

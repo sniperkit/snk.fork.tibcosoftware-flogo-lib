@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"os"
-	"github.com/TIBCOSoftware/flogo-lib/config"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
 )
 
 func TestSecretKeyDefault(t *testing.T) {
@@ -47,7 +53,3 @@ func TestSecretKey(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, "mysecurepassword1", decoded)
 }
-
-
-
-

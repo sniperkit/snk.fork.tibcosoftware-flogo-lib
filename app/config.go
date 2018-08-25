@@ -1,31 +1,36 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package app
 
 import (
 	"encoding/json"
-	"os"
-
-	"github.com/TIBCOSoftware/flogo-lib/app/resource"
-	"github.com/TIBCOSoftware/flogo-lib/config"
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/trigger"
 	"io/ioutil"
+	"os"
 	"regexp"
 	"strings"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/app/resource"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/config"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/trigger"
 )
 
 // App is the configuration for the App
 type Config struct {
-	Name        string             `json:"name"`
-	Type        string             `json:"type"`
-	Version     string             `json:"version"`
-	Description string             `json:"description"`
+	Name        string `json:"name"`
+	Type        string `json:"type"`
+	Version     string `json:"version"`
+	Description string `json:"description"`
 
-	Properties  []*data.Attribute  `json:"properties"`
-	Channels    []string           `json:"channels"`
-	Triggers    []*trigger.Config  `json:"triggers"`
-	Resources   []*resource.Config `json:"resources"`
-	Actions     []*action.Config   `json:"actions"`
+	Properties []*data.Attribute  `json:"properties"`
+	Channels   []string           `json:"channels"`
+	Triggers   []*trigger.Config  `json:"triggers"`
+	Resources  []*resource.Config `json:"resources"`
+	Actions    []*action.Config   `json:"actions"`
 }
 
 // defaultConfigProvider implementation of ConfigProvider

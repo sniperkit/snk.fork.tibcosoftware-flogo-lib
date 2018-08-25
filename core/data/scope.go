@@ -1,9 +1,14 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
 	"errors"
-	"sync"
 	"fmt"
+	"sync"
 )
 
 //func init() {

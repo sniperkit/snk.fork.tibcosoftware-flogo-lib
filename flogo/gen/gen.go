@@ -1,18 +1,23 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
-	"path/filepath"
+	"encoding/json"
+	"fmt"
+	"go/build"
+	"io"
 	"io/ioutil"
 	"os"
-	"go/build"
-	"fmt"
-	"encoding/json"
+	"path/filepath"
 	"strings"
 	"text/template"
-	"io"
 )
 
-func main()  {
+func main() {
 	args := os.Args
 
 	fmt.Println("Generating flogo metadata in ", args[1])
@@ -93,7 +98,7 @@ func getJsonMetadata() string {
 var tplActivityMetadataGoFile = `package {{.Package}}
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/activity"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/activity"
 )
 
 var jsonMetadata = ` + "`{{.MetadataJSON}}`" + `
@@ -108,7 +113,7 @@ func init() {
 var tplTriggerMetadataGoFile = `package {{.Package}}
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/trigger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/trigger"
 )
 
 var jsonMetadata = ` + "`{{.MetadataJSON}}`" + `

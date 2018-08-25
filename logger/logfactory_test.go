@@ -1,11 +1,16 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package logger
 
 import (
+	"fmt"
 	"math"
 	"sync"
 	"testing"
 
-	"fmt"
 	"github.com/stretchr/testify/assert"
 )
 

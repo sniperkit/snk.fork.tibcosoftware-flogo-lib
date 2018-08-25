@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package trigger
 
 import (
 	//"context"
 	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
 )
 
 type MockFactory struct {

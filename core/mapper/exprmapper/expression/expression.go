@@ -1,12 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package expression
 
 import (
 	"fmt"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/expression/expr"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/expression/gocc/lexer"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/expression/gocc/parser"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/expression/expr"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/expression/gocc/lexer"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/expression/gocc/parser"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 var log = logger.GetLogger("expression")

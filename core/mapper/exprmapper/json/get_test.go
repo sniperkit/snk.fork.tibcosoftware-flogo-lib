@@ -1,12 +1,17 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package json
 
 import (
 	"sync"
 	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json/field"
-
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json/field"
 )
 
 var jsonData = `{

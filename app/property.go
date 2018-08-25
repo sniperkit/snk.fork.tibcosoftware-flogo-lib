@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package app
 
 var propertyProvider *PropertyProvider
@@ -13,7 +18,6 @@ func GetPropertyProvider() *PropertyProvider {
 type PropertyProvider struct {
 	properties map[string]interface{}
 }
-
 
 func (pp *PropertyProvider) GetProperty(property string) (interface{}, bool) {
 	prop, exists := pp.properties[property]

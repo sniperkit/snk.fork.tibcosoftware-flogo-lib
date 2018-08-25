@@ -1,15 +1,20 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package json
 
 import (
 	"encoding/json"
+	"fmt"
 	"reflect"
 	"sync"
 	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json/field"
-
-	"fmt"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json/field"
 )
 
 func TestSetArrayObject(t *testing.T) {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package logger
 
 import (
@@ -59,5 +64,3 @@ func GetDefaultLogger() Logger {
 	}
 	return defLogger
 }
-
-

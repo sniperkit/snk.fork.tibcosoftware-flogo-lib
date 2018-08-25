@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package util
 
 import (
@@ -7,7 +12,7 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 // HandlePanic helper method to handle panics

@@ -1,10 +1,16 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package trigger
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
 	"strconv"
 	"time"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 // Config is the configuration for a Trigger
@@ -95,7 +101,7 @@ func (c *Config) GetSetting(setting string) string {
 
 type HandlerConfig struct {
 	parent   *Config
-	Name     string `json:"name,omitempty"`
+	Name     string                 `json:"name,omitempty"`
 	Settings map[string]interface{} `json:"settings"`
 	Output   map[string]interface{} `json:"output"`
 	Action   *ActionConfig

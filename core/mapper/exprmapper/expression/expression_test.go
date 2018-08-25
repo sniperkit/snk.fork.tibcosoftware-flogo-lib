@@ -1,14 +1,19 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package expression
 
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 	"testing"
 
-	"os"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 func TestExpressionTernary(t *testing.T) {

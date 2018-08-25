@@ -1,28 +1,31 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package exprmapper
 
 import (
 	"errors"
 	"fmt"
+	"reflect"
 	"strings"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json/field"
-
-	"reflect"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/expression"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/ref"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/expression"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json/field"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/ref"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 
 	//Pre registry all function for now
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/array/length"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/number/random"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/string/concat"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/string/equals"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/string/equalsignorecase"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/string/length"
-	_ "github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/function/string/substring"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/array/length"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/number/random"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/string/concat"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/string/equals"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/string/equalsignorecase"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/string/length"
+	_ "github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/function/string/substring"
 )
 
 var log = logger.GetLogger("mapper")

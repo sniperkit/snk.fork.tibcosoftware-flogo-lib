@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package function
 
 import (
@@ -6,10 +11,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/funcexprtype"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/ref"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/funcexprtype"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/ref"
 )
 
 func ConvertToValue(value interface{}, dataType funcexprtype.Type) (interface{}, error) {

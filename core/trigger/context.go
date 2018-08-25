@@ -1,12 +1,18 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package trigger
 
 import (
 	"context"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 type key int
+
 var handlerKey key
 
 type HandlerInfo struct {
@@ -16,7 +22,7 @@ type HandlerInfo struct {
 // NewHandlerContext add the handler info to a new child context
 func NewHandlerContext(parentCtx context.Context, config *HandlerConfig) context.Context {
 	if config != nil && config.Name != "" {
-		return context.WithValue(parentCtx, handlerKey, &HandlerInfo{Name:config.Name})
+		return context.WithValue(parentCtx, handlerKey, &HandlerInfo{Name: config.Name})
 	}
 	return parentCtx
 }

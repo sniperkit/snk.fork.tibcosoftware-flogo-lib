@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package util
 
 //Copyright © 2014, Roger Peppe

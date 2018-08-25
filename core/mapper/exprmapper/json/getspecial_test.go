@@ -1,13 +1,18 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package json
 
 import (
 	"encoding/json"
+	"strconv"
 	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/json/field"
-
 	"github.com/stretchr/testify/assert"
-	"strconv"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/json/field"
 )
 
 var SpecialData = `{

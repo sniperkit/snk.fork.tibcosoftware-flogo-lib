@@ -1,10 +1,16 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package channels
 
 import (
-	"testing"
-	"github.com/stretchr/testify/assert"
-	"time"
 	"fmt"
+	"testing"
+	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNew_Started(t *testing.T) {
@@ -60,7 +66,6 @@ func TestStart(t *testing.T) {
 	assert.True(t, cImpl.active)
 }
 
-
 func TestChannel_Publish(t *testing.T) {
 	channels = map[string]*channelImpl{}
 	channel, err := New("test1", 1)
@@ -73,7 +78,7 @@ func TestChannel_Publish(t *testing.T) {
 
 	select {
 	case msg := <-cImpl.ch:
-		assert.Equal(t,1,msg )
+		assert.Equal(t, 1, msg)
 	default:
 		assert.Fail(t, "no message received")
 	}
@@ -106,7 +111,6 @@ func TestChannel_AddListenerStarted(t *testing.T) {
 	assert.NotNil(t, err)
 }
 
-
 func TestChannel_AddListener(t *testing.T) {
 	channels = map[string]*channelImpl{}
 	channel, err := New("test1", 1)
@@ -123,15 +127,14 @@ func TestChannel_AddListener(t *testing.T) {
 
 type cbTester struct {
 	called int
-	val interface{}
+	val    interface{}
 }
 
-func (cbt *cbTester)onMessage(msg interface{})  {
+func (cbt *cbTester) onMessage(msg interface{}) {
 	cbt.called++
 	cbt.val = msg
 	fmt.Printf("HERE\n")
 }
-
 
 func TestChannel_Callback(t *testing.T) {
 	channels = map[string]*channelImpl{}
@@ -146,7 +149,7 @@ func TestChannel_Callback(t *testing.T) {
 	Start()
 
 	channel.Publish(22)
-	time.Sleep(100 *time.Millisecond)
+	time.Sleep(100 * time.Millisecond)
 	assert.Equal(t, 1, cbt.called)
 	assert.Equal(t, 22, cbt.val)
 }

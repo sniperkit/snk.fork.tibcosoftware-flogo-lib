@@ -1,11 +1,16 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package data
 
 import (
 	"errors"
 	"fmt"
+	"reflect"
 	"strconv"
 	"strings"
-	"reflect"
 )
 
 //todo consolidate and optimize code
@@ -35,7 +40,7 @@ func PathGetValue(value interface{}, path string) (interface{}, error) {
 			}
 
 			if val.Kind() == reflect.Struct {
-				fieldName,npIdx := getObjectKey(path[1:])
+				fieldName, npIdx := getObjectKey(path[1:])
 				newPath = path[npIdx:]
 				f := val.FieldByName(fieldName)
 				if f.IsValid() {
@@ -207,8 +212,6 @@ func pathGetSetObjValue(objValue map[string]interface{}, path string, value inte
 
 	return val, path[npIdx:], nil
 }
-
-
 
 func pathGetSetParamsValue(params map[string]string, path string, value interface{}, set bool) (interface{}, string, error) {
 

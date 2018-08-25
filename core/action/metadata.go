@@ -1,8 +1,14 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package action
 
 import (
 	"encoding/json"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 // Metadata is the metadata for the Activity

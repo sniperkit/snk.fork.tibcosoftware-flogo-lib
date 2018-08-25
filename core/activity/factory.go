@@ -1,9 +1,15 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package activity
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Factory func(config *Config) (Activity, error)
-
 
 var (
 	activityFactories = make(map[string]Factory)

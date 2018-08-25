@@ -1,9 +1,14 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package action
 
 import (
 	"encoding/json"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
 )
 
 // Config is the configuration for the Action
@@ -21,4 +26,3 @@ type Config struct {
 }
 
 //do we need a call that will "fix up" the config, coerce to the right attr, using the metadata?
-

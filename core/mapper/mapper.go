@@ -1,14 +1,18 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package mapper
 
 import (
-	"fmt"
-
 	"encoding/json"
+	"fmt"
 	"strings"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 var mapplerLog = logger.GetLogger("basic-mapper")

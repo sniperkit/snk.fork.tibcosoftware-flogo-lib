@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package expression
 
 import (
@@ -6,10 +11,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/expression/function"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/expression/function"
 )
 
 func TestFunctionConcatWithSpace(t *testing.T) {

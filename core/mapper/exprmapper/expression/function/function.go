@@ -1,18 +1,22 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package function
 
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"reflect"
 	"runtime/debug"
 	"strings"
 
-	"fmt"
-
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/funcexprtype"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper/exprmapper/ref"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/funcexprtype"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper/exprmapper/ref"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 var logrus = logger.GetLogger("function")

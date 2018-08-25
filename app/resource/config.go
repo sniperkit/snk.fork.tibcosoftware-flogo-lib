@@ -1,6 +1,13 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package resource
 
-import "encoding/json"
+import (
+	"encoding/json"
+)
 
 type ResourcesConfig struct {
 	Resources []*Config `json:"resources"`

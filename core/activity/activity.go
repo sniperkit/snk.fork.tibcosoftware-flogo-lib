@@ -1,7 +1,13 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package activity
 
-import "github.com/TIBCOSoftware/flogo-lib/core/data"
-
+import (
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+)
 
 // Activity is an interface for defining a custom Activity Execution
 type Activity interface {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package activity
 
 type Config struct {
@@ -7,7 +12,7 @@ type Config struct {
 	OutputAttrs map[string]interface{} `json:"output,omitempty"`
 }
 
-func (c *Config) FixUp(metadata *Metadata)  {
+func (c *Config) FixUp(metadata *Metadata) {
 
 	//fixup settings
 

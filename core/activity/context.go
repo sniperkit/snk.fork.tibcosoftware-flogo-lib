@@ -1,8 +1,13 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package activity
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	)
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+)
 
 // Context describes the execution context for an Activity.
 // It provides access to attributes, task and Flow information.
@@ -74,7 +79,6 @@ type Host interface {
 	//GetDetails() map[string]string
 }
 
-
 // Deprecated: Use ActivityHost() instead.
 type FlowDetails interface {
 
@@ -100,6 +104,6 @@ type SharedTempDataSupport interface {
 // GetSharedTempDataSupport for the activity
 func GetSharedTempDataSupport(ctx Context) (SharedTempDataSupport, bool) {
 
-	ts, ok :=  ctx.(SharedTempDataSupport)
+	ts, ok := ctx.(SharedTempDataSupport)
 	return ts, ok
 }

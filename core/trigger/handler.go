@@ -1,14 +1,18 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package trigger
 
 import (
 	"context"
-
 	"fmt"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/mapper"
-	"github.com/TIBCOSoftware/flogo-lib/logger"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/mapper"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/logger"
 )
 
 type Handler struct {
@@ -64,7 +68,7 @@ func (h *Handler) GetSetting(setting string) (interface{}, bool) {
 	return val, exists
 }
 
-func (h *Handler) GetOutput() (map[string]interface{}) {
+func (h *Handler) GetOutput() map[string]interface{} {
 
 	if h.config == nil {
 		return nil

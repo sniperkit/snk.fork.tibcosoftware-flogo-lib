@@ -1,10 +1,15 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package util
 
 import (
 	"errors"
 	"sync"
 
-	"github.com/TIBCOSoftware/flogo-lib/util/managed"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/util/managed"
 )
 
 // Service is an interface for defining/managing a service

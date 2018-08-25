@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package field
 
 import (
@@ -68,31 +73,29 @@ func TestGetAllSpecial(t *testing.T) {
 
 	res, err := GetAllspecialFields(path)
 	assert.Nil(t, err)
-	assert.Equal(t, []string{"$activity[namesss]","data", "Array1"}, res)
-
+	assert.Equal(t, []string{"$activity[namesss]", "data", "Array1"}, res)
 
 	path = "$trigger[namesss]['data']['Array1']"
 
 	res, err = GetAllspecialFields(path)
 	assert.Nil(t, err)
-	assert.Equal(t, []string{"$trigger[namesss]","data", "Array1"}, res)
-
+	assert.Equal(t, []string{"$trigger[namesss]", "data", "Array1"}, res)
 
 	path = "$trigger['data']['Array1']"
 
 	res, err = GetAllspecialFields(path)
 	assert.Nil(t, err)
-	assert.Equal(t, []string{"$trigger","data", "Array1"}, res)
+	assert.Equal(t, []string{"$trigger", "data", "Array1"}, res)
 
 	path = "$property['data']['Array1']"
 
 	res, err = GetAllspecialFields(path)
 	assert.Nil(t, err)
-	assert.Equal(t, []string{"$property","data", "Array1"}, res)
+	assert.Equal(t, []string{"$property", "data", "Array1"}, res)
 
 	path = "$env['data']['Array1']"
 
 	res, err = GetAllspecialFields(path)
 	assert.Nil(t, err)
-	assert.Equal(t, []string{"$env","data", "Array1"}, res)
+	assert.Equal(t, []string{"$env", "data", "Array1"}, res)
 }

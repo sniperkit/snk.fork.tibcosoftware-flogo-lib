@@ -1,17 +1,22 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package flogo
 
 import (
 	"context"
-	"strings"
-
 	"encoding/json"
-	"github.com/TIBCOSoftware/flogo-lib/app"
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
-	"github.com/TIBCOSoftware/flogo-lib/core/activity"
-	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/TIBCOSoftware/flogo-lib/core/trigger"
 	"reflect"
 	"strconv"
+	"strings"
+
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/app"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/action"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/activity"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/data"
+	"github.com/sniperkit/snk.fork.tibcosoftware-flogo-lib/core/trigger"
 )
 
 // toAppConfig converts an App to the core app configuration model
@@ -37,7 +42,7 @@ func toAppConfig(a *App) *app.Config {
 // toTriggerConfig converts Trigger to the core Trigger configuration model
 func toTriggerConfig(id string, trg *Trigger) *trigger.Config {
 
-	triggerConfig := &trigger.Config{Id:id, Ref: trg.ref, Settings: trg.Settings()}
+	triggerConfig := &trigger.Config{Id: id, Ref: trg.ref, Settings: trg.Settings()}
 
 	//todo add output
 	//trigger.Config struct { Output   map[string]interface{} `json:"output"` }
